@@ -4,6 +4,7 @@ plugins {
     id 'jacoco'
     id 'checkstyle'
     id "com.github.spotbugs" version "4.7.0"
+    id 'pmd'
 }
 
 repositories {
@@ -44,4 +45,21 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
 
 spotbugs {
     ignoreFailures = true
+}
+
+pmd{
+    def javasRoot = "${rootProject.rootDir}/src/main/java"
+    task pmdMain(type: Pmd, overwrite: true) {
+        ignoreFailures = true
+        description 'Runs PMD inspection against sourcesets.'
+        group = 'Code Quality'
+        ruleSetFiles = files("${rootProject.rootDir}/config/pmd/basic.xml")
+        source = fileTree(javasRoot)
+        include '**/*.java'
+        exclude '**/gen/**'
+        reports {
+            xml.enabled = true
+            html.enabled = false
+        }
+    }
 }
