@@ -1,6 +1,7 @@
-plugins { 
-    id 'java' 
+plugins {
+    id 'java'
     id 'idea'
+    id 'jacoco'
 }
 
 repositories {
