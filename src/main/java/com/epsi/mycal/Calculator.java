@@ -94,7 +94,7 @@ public class Calculator {
    * @return True if sub number is in number, else false
    */
   public boolean find(int number, byte subNumber) {
-    if (number < 0 || number > 9){
+    if (subNumber < 0 || subNumber > 9){
       return false;
     }
     String SBNumber = Integer.toString(number);
