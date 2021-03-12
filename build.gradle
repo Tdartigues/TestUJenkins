@@ -43,5 +43,5 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
 }
 
 spotbugs {
-    ignoreFailures = false
+    ignoreFailures = true
 }

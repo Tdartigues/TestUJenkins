@@ -86,4 +86,18 @@ public class Calculator {
     }
     return true;
   }
+
+  /**
+   * Find a sub number in a number.
+   * @param number number
+   * @param subNumber sub number to find
+   * @return True if sub number is in number, else false
+   */
+  public boolean find(int number, byte subNumber) {
+    if (number < 0 || number > 9){
+      return false;
+    }
+    String SBNumber = Integer.toString(number);
+    return SBNumber.contains(Byte.toString(subNumber));
+  }
 }

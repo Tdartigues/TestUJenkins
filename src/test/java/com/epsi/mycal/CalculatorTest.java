@@ -129,5 +129,24 @@ class CalculatorTest {
     assertFalse(actual);
   }
 
+  @Test
+  public void testFind() throws Exception {
+    int bNumber = 123456789;
+    byte number = 1;
+    Calculator calc = new Calculator();
+    boolean actual = calc.find(bNumber,number);
+
+    assertTrue(actual);
+  }
+
+  @Test
+  public void testNFind() throws Exception {
+    int bNumber = 23456789;
+    byte number = 1;
+    Calculator calc = new Calculator();
+    boolean actual = calc.find(bNumber,number);
+
+    assertFalse(actual);
+  }
 
 }
