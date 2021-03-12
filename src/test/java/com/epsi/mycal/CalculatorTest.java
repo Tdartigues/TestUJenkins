@@ -34,5 +34,14 @@ class CalculatorTest {
 
         assertEquals(2, actual);
     }
+    @Test
+    public void testMult() throws Exception {
+        int a = 3;
+        int b = 2;
+        Calculator calc = new Calculator();
+        int actual = calc.mult(a,b);
+
+        assertEquals(6, actual);
+    }
 
 }
