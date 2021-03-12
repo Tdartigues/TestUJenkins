@@ -7,6 +7,7 @@ public class Calculator {
 
   /**
    * Addition method.
+   *
    * @param number1 number 1 to add
    * @param number2 number 2 to add
    * @return the result of the operation
@@ -18,6 +19,7 @@ public class Calculator {
 
   /**
    * Substraction method.
+   *
    * @param number1 number 1 to sub
    * @param number2 number 2 to sub
    * @return the result of the operation
@@ -29,6 +31,7 @@ public class Calculator {
 
   /**
    * Multiplie method.
+   *
    * @param number1 number 1 to mult
    * @param number2 number 2 to mult
    * @return the result of the operation
@@ -40,6 +43,7 @@ public class Calculator {
 
   /**
    * Division methode.
+   *
    * @param number1 number 1 to div
    * @param number2 number 2 to div
    * @return the result of the operation
@@ -50,6 +54,7 @@ public class Calculator {
 
   /**
    * Pair methode.
+   *
    * @param number1 number to cheak
    * @return True if odd, false if not
    */
@@ -59,6 +64,7 @@ public class Calculator {
 
   /**
    * Prime methode.
+   *
    * @param number1 number to cheak
    * @return True if prime, false if not
    */
@@ -89,15 +95,16 @@ public class Calculator {
 
   /**
    * Find a sub number in a number.
-   * @param number number
+   *
+   * @param number    number
    * @param subNumber sub number to find
    * @return True if sub number is in number, else false
    */
   public boolean find(int number, byte subNumber) {
-    if (subNumber < 0 || subNumber > 9){
+    if (subNumber < 0 || subNumber > 9) {
       return false;
     }
-    String SBNumber = Integer.toString(number);
-    return SBNumber.contains(Byte.toString(subNumber));
+    String sbnumber = Integer.toString(number);
+    return sbnumber.contains(Byte.toString(subNumber));
   }
 }

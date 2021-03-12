@@ -134,7 +134,7 @@ class CalculatorTest {
     int bNumber = 123456789;
     byte number = 1;
     Calculator calc = new Calculator();
-    boolean actual = calc.find(bNumber,number);
+    boolean actual = calc.find(bNumber, number);
 
     assertTrue(actual);
   }
@@ -144,7 +144,27 @@ class CalculatorTest {
     int bNumber = 23456789;
     byte number = 1;
     Calculator calc = new Calculator();
-    boolean actual = calc.find(bNumber,number);
+    boolean actual = calc.find(bNumber, number);
+
+    assertFalse(actual);
+  }
+
+  @Test
+  public void testOobUpFind() throws Exception {
+    int bNumber = 123456789;
+    byte number = 10;
+    Calculator calc = new Calculator();
+    boolean actual = calc.find(bNumber, number);
+
+    assertFalse(actual);
+  }
+
+  @Test
+  public void testOobDownFind() throws Exception {
+    int bNumber = 123456789;
+    byte number = -1;
+    Calculator calc = new Calculator();
+    boolean actual = calc.find(bNumber, number);
 
     assertFalse(actual);
   }

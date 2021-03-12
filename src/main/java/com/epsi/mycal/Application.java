@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Application {
   /**
    * Main Application Calc.
+   *
    * @param args Unuse
    */
   public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Application {
 
     List<String> histo = new ArrayList<>();
     char operationChoisie = ' ';
-    while (operationChoisie != 'Q'){
+    while (operationChoisie != 'Q') {
       System.out.println("Choisie l'opération que tu veux faire :");
       System.out.println("Tape A pour l'addition,"
           + " tape M pour la multiplication,"
@@ -80,10 +81,10 @@ public class Application {
 
         boolean result = calc.prime(number1);
 
-        if(result){
+        if (result) {
           System.out.println(number1 + " est premier");
           histo.add(number1 + " est premier");
-        }else {
+        } else {
           System.out.println(number1 + " n'est pas premier");
           histo.add(number1 + " n'est pas premier");
         }
@@ -95,19 +96,19 @@ public class Application {
         int number1 = sc.nextInt();
 
         boolean result = calc.pair(number1);
-        if(result){
+        if (result) {
           System.out.println(number1 + " est paire");
           histo.add(number1 + " est paire");
-        }else {
+        } else {
           System.out.println(number1 + " n'est pas paire");
           histo.add(number1 + " n'est pas paire");
         }
 
-      } else if( operationChoisie == 'Q') {
+      } else if (operationChoisie == 'Q') {
         System.out.println("Fin");
-      } else if( operationChoisie == 'H') {
-        for (String sHisto: histo) {
-          System.out.println(sHisto);
+      } else if (operationChoisie == 'H') {
+        for (String stringhisto : histo) {
+          System.out.println(stringhisto);
         }
       } else {
         System.out.println("Mauvais caractère");
