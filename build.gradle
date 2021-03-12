@@ -3,6 +3,7 @@ plugins {
     id 'idea'
     id 'jacoco'
     id 'checkstyle'
+    id "com.github.spotbugs" version "4.7.0"
 }
 
 repositories {
@@ -39,4 +40,8 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
     exclude '**/gen/**'
     classpath = fileTree(classesJava)
     configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
+}
+
+spotbugs {
+    ignoreFailures = false
 }
