@@ -1,5 +1,6 @@
 package com.epsi.mycal;
 
+import java.nio.charset.Charset;
 import java.util.Scanner;
 
 public class Application {
@@ -18,7 +19,7 @@ public class Application {
         + " tape D pour la division,"
         + " tape P pour les chiffres premier"
         + " et O pour les chiffres paires");
-    Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in, Charset.defaultCharset());
     char operationChoisie = sc.nextLine().charAt(0);
 
     Calculator calc = new Calculator();
