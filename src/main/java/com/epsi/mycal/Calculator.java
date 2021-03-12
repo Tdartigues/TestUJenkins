@@ -79,12 +79,11 @@ public class Calculator {
     }
 
     //Looking for other number
-    boolean actual = true;
     for (int i = 3; i * i <= number1; i += 2) {
       if (number1 % i == 0) {
-        actual = false;
+        return false;
       }
     }
-    return actual;
+    return true;
   }
 }
